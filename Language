@@ -1,0 +1,15 @@
+def pig_latin(text):
+    say = ""
+    # Separate the text into words
+    words = text.split()
+    # Create the pig latin word and add it to the list
+    pig_words = []
+    for word in words:
+        new_word = word[1:] + word[0] + "ay"
+        pig_words.append(new_word)
+    # Turn the list back into a phrase
+    say = " ".join(pig_words)
+    return say
+
+print(pig_latin("hello how are you"))
+print(pig_latin("programming in python is fun"))
